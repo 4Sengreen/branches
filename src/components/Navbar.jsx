@@ -103,7 +103,7 @@ function Navbar({ isOpen, setIsOpen }) {
           <button onClick={() => navigate('/')}>
             <div className='flex-1 flex justify-left items-center px-3 space-x-1 group cursor-pointer'>
               <div>
-                <img src='/simple branch.svg' alt='branches' className='w-6 h-6 sm:w-8 sm:h-8' />
+                <img src='/simple-branch.svg' alt='branches' className='w-6 h-6 sm:w-8 sm:h-8' />
               </div>
               <span className='text-lg sm:text-xl md:text-2xl font-medium'>
                 <span>Branches</span>
