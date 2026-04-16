@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+* {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
