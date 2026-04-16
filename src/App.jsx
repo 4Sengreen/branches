@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import CreateReviewPage from './components/CreateReviewPage';
-import Profile from './components/Profile';
-import LoginPage from './components/LoginPage';
-import { AuthProvider } from './components/auth/useAuth';
-import SignUpPage from './components/SignUpPage';
-import AllReviews from './components/AllReviews';
-import EditProfile from './components/EditProfile';
-import SearchPage from './components/SearchPage';
-import ReviewPage from './components/ReviewPage';
-import BookPage from './components/BookPage';
-import LatestBooks from './components/LatestBooks';
+import HomePage from './components/HomePage.jsx';
+import CreateReviewPage from './components/CreateReviewPage.jsx';
+import Profile from './components/Profile.jsx';
+import LoginPage from './components/LoginPage.jsx';
+import { AuthProvider } from './components/auth/useAuth.jsx';
+import SignUpPage from './components/SignUpPage.jsx';
+import AllReviews from './components/AllReviews.jsx';
+import EditProfile from './components/EditProfile.jsx';
+import SearchPage from './components/SearchPage.jsx';
+import ReviewPage from './components/ReviewPage.jsx';
+import BookPage from './components/BookPage.jsx';
+import LatestBooks from './components/LatestBooks.jsx';
 
 function App({}) {
   //Initialisation ---------------------------------

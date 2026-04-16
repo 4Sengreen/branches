@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Navbar from './navbar';
-import Footer from './Footer';
-import Sidebar from './Sidebar';
-import FloatingReviewButton from './FloatingReviewButton';
+import Navbar from './Navbar.jsx';
+import Footer from './Footer.jsx';
+import Sidebar from './Sidebar.jsx';
+import FloatingReviewButton from './FloatingReviewButton.jsx';
 
 function MainPages({ children }) {
   //Initialisation ---------------------------------

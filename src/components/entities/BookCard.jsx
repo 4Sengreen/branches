@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import useLoad from '../API/useLoad';
+import useLoad from '../API/useLoad.js';
 
 function BookCard({ book, className }) {
   const navigation = useNavigate();

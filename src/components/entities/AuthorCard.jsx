@@ -1,4 +1,4 @@
-import useLoad from '../API/useLoad';
+import useLoad from '../API/useLoad.js';
 
 function AuthorCard({ author }) {
   const works = author.works || [];

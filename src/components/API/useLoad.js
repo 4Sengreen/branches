@@ -1,4 +1,4 @@
-import API from './API';
+import API from './API.js';
 import { useState, useEffect, useMemo } from 'react';
 
 const useLoad = (endpoint, query = '*', filters = []) => {

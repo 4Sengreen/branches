@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from './auth/useAuth';
+import { useAuth } from './auth/useAuth.jsx';
 import { supabase } from '../supabase-client.js';
 import useLoad from './API/useLoad.js';
 import AvatarUploader from './entities/AvatarUploader.jsx';
