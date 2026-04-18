@@ -143,15 +143,16 @@ function ReviewPage() {
               }}
             />
             {videoId && (
-              <div className='mt-4'>
-                <iframe
-                  width='560'
-                  height='315'
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title='YouTube video'
-                  frameBorder='0'
-                  allowFullScreen
-                />
+              <div className='mt-4 flex justify-center'>
+                <div className='relative w-full max-w-[560px] pb-[56.25%] h-0'>
+                  <iframe
+                    className='absolute top-0 left-0 w-full h-full'
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title='YouTube video'
+                    frameBorder='0'
+                    allowFullScreen
+                  />
+                </div>
               </div>
             )}
           </div>
