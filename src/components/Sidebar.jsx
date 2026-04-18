@@ -41,9 +41,9 @@ function Sidebar({ isOpen, onPress }) {
           <button onClick={() => navigate('/')}>
             <a className='text-gray hover:text-white text-lg'>Most Discussed Books</a>
           </button>
-          <a href='Support' className='text-gray hover:text-white text-lg'>
-            Support
-          </a>
+          <button onClick={(on) => navigate('/')}>
+            <a className='text-gray hover:text-white text-lg'>Support</a>
+          </button>
         </div>
       </nav>
     </aside>

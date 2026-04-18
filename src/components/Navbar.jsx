@@ -123,9 +123,9 @@ function Navbar({ isOpen, setIsOpen }) {
             <button onClick={() => navigate('/')}>
               <a className='text-gray hover:text-white text-sm'>Most Discussed Books</a>
             </button>
-            <a href='Support' className='text-gray hover:text-white text-sm'>
-              Support
-            </a>
+            <button onClick={() => navigate('/')}>
+              <a className='text-gray hover:text-white text-sm'>Support</a>
+            </button>
             <button onClick={() => navigate('/profile')}>
               <img src='/profile-circle.svg' alt='profile' className='w-8 h-8 rounded-full' />
             </button>
