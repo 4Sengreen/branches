@@ -8,6 +8,21 @@ import { useAuth } from './auth/useAuth.jsx';
 import supabase from '../supabase-client.js';
 import TopLevelCommentBox from './entities/TopLevelCommentBox.jsx';
 
+function getYouTubeId(text) {
+  if (!text) return null;
+
+  const embedMatch = text.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
+  if (embedMatch) return embedMatch[1];
+
+  const watchMatch = text.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+  if (watchMatch) return watchMatch[1];
+
+  const shortMatch = text.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+  if (shortMatch) return shortMatch[1];
+
+  return null;
+}
+
 function ReviewPage() {
   const { reviewId } = useParams();
   const { loggedInUser } = useAuth();
@@ -92,6 +107,8 @@ function ReviewPage() {
   const bookCover = review.books?.cover_url || '/default-book.png';
   const userName = review.users?.user_name || 'Anonymous';
   const bookTitle = review.books?.title || 'Untitled Book';
+  const text = review.review_text || '';
+  const videoId = getYouTubeId(text);
 
   return (
     <MainPages>
@@ -122,9 +139,21 @@ function ReviewPage() {
             <article
               className='prose'
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(review.review_text || ''),
+                __html: DOMPurify.sanitize(text.replace(/https?:\/\/[^\s]+/, '')),
               }}
             />
+            {videoId && (
+              <div className='mt-4'>
+                <iframe
+                  width='560'
+                  height='315'
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title='YouTube video'
+                  frameBorder='0'
+                  allowFullScreen
+                />
+              </div>
+            )}
           </div>
           <div className='h-px bg-gray-500 my-6 lg:my-0 lg:w-px lg:h-auto lg:bg-gray-300' />
           <aside className='flex-1 space-y-6'>

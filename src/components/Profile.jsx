@@ -13,10 +13,10 @@ function Profile({}) {
   const navigate = useNavigate();
   const { loggedInUser, logout } = useAuth();
   //State ------------------------------------------
-  const userId = loggedInUser?.auth?.id;
+  const userId = loggedInUser?.profile?.user_id;
 
   const reviewFilters = useMemo(() => {
-    return userId ? [{ column: 'user_id', value: userId }] : [];
+    return userId ? [{ column: 'user_id', type: 'eq', value: userId }] : [];
   }, [userId]);
 
   const reviewColumns = useMemo(
